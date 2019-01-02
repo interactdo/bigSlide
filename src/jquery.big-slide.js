@@ -126,7 +126,7 @@
 
         // CSS for how the menu will be positioned off screen
         var positionOffScreen = {
-          'position': 'fixed',
+          'position': 'absolute',
           'top': '0',
           'bottom': '0',
           'height': '100%'
@@ -245,7 +245,7 @@
 
         // this makes my eyes bleed, but adding it back in as it's a highly requested feature
         if (settings.easyClose) {
-          $(document).on('click.bigSlide', function(e) {
+          $(document).on('click.bigSlide touchstart.bigSlide', function(e) {
            if (!$(e.target).parents().addBack().is(menuLink) && !$(e.target).closest(settings.menu).length && controller.getState() === 'open')  {
              view.toggleClose();
            }
