@@ -1,4 +1,4 @@
-(function (factory) {
+(async function (factory) {
   'use strict';
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
