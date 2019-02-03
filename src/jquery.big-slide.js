@@ -5,7 +5,7 @@
     define(['jquery'], factory);
   } else if (typeof exports === 'object') {
     // Node/CommonJS
-    module.exports = factory(require('jquery'));
+    module.exports = (await import(/* webpackChunkName: "jquery" */ /* webpackMode: "lazy" */ 'jquery')).default;
   } else {
     // Browser globals
     factory(jQuery);
